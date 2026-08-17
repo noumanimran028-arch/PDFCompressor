@@ -6,6 +6,9 @@ body{
     justify-content:center;
     align-items:center;
 
+    padding:15px;
+    box-sizing:border-box;
+
     background-image:url('https://i.pinimg.com/1200x/56/2b/20/562b20256af2ce123846c7d95ea68595.jpg');
     background-position:center;
     background-repeat:no-repeat;
@@ -13,9 +16,6 @@ body{
 
     font-family:Arial, sans-serif;
     font-weight:bold;
-
-    padding:15px;
-    box-sizing:border-box;
 }
 
 .container{
@@ -135,18 +135,24 @@ input[type="file"]::file-selector-button{
 }
 /* Mobile */
 @media (max-width:480px){
+
     body{
-        padding:20px 10px 10px 10px;
-        background-position:center center;
+        padding:30px 10px 15px;
+        align-items:flex-start;
+
+        background-position:center;
         background-size:cover;
     }
 
     .container{
         width:100%;
-        min-height:75vh;
+        min-height:auto;
+
         padding:20px 15px;
         gap:15px;
+
         border-width:2px;
+        border-radius:15px;
     }
 
     h1{
@@ -155,6 +161,7 @@ input[type="file"]::file-selector-button{
 
     input,
     .btn1{
+        width:100%;
         font-size:14px;
     }
 
