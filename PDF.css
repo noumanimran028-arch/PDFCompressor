@@ -18,6 +18,7 @@ body{
     font-weight:bold;
 }
 
+
 .container{
     display:flex;
     flex-direction:column;
@@ -32,20 +33,28 @@ body{
 
     border:4px solid #7a0bcc;
     border-radius:20px;
+
     box-shadow:0 0 15px #7579ff;
 
     backdrop-filter:blur(10px);
+
     box-sizing:border-box;
 }
 
+
 h1{
+    margin:0;
+
     color:purple;
-    text-shadow:0 0 10px purple;
     text-align:center;
+
+    text-shadow:0 0 10px purple;
 }
+
 
 input{
     width:100%;
+
     padding:10px;
 
     color:pink;
@@ -53,6 +62,7 @@ input{
 
     border:1px solid #7a0bcc;
     border-radius:12px;
+
     box-shadow:0 0 10px #7579ff;
 
     outline:none;
@@ -61,19 +71,29 @@ input{
     transition:0.3s;
 }
 
+
 input:focus{
     border-color:#b84cff;
     box-shadow:0 0 12px #7579ff;
 }
 
+
 input[type="file"]::file-selector-button{
-    background:transparent;
-    border:none;
-    border-radius:6px;
-    box-shadow:0 0 1px purple;
+    margin-right:10px;
+
+    padding:6px 10px;
+
     color:pink;
+    background:transparent;
+
+    border:1px solid #7a0bcc;
+    border-radius:6px;
+
+    box-shadow:0 0 4px purple;
+
     cursor:pointer;
 }
+
 
 .btn1{
     width:100%;
@@ -81,74 +101,105 @@ input[type="file"]::file-selector-button{
 
     padding:12px;
 
-    background:transparent;
     color:pink;
+    background:transparent;
 
     border:1px solid #7a0bcc;
     border-radius:10px;
+
     box-shadow:0 0 10px #0006c9;
 
     cursor:pointer;
+
     transition:0.3s;
 }
 
+
+/* Button Hover */
+
 .btn1:hover{
     transform:scale(1.05);
+
     box-shadow:0 0 12px purple;
 }
+
 
 .original,
 .compress{
     color:purple;
+
     text-shadow:0 0 10px purple;
+
+    text-align:center;
 }
+
 
 .loading{
     color:purple;
+
     font-size:22px;
     font-style:italic;
+
+    text-align:center;
 }
 
-/* Tablet */
+
+
 @media (max-width:768px){
 
     body{
+        min-height:100vh;
+
         align-items:flex-start;
-        padding-top:20px;
+
+        padding:40px 15px 20px;
     }
 
     .container{
         width:100%;
-        margin:0;
-        padding:15px;
+        max-width:500px;
+
+        padding:20px;
+
+        gap:18px;
+
+        border-width:3px;
     }
 
     h1{
         font-size:24px;
     }
 
-    input,
+    input{
+        width:100%;
+    }
+
     .btn1{
         width:100%;
-        max-width:none;
+        max-width:250px;
     }
 }
-/* Mobile */
+
+
 @media (max-width:480px){
 
     body{
-        padding:30px 10px 15px;
+        min-height:100vh;
+
         align-items:flex-start;
 
-        background-position:center;
+        padding:50px 10px 20px;
+
+        background-position:center center;
         background-size:cover;
     }
 
     .container{
         width:100%;
-        min-height:auto;
+        max-width:100%;
 
         padding:20px 15px;
+
         gap:15px;
 
         border-width:2px;
@@ -159,9 +210,31 @@ input[type="file"]::file-selector-button{
         font-size:1.3rem;
     }
 
-    input,
+    input{
+        width:100%;
+
+        padding:9px;
+
+        font-size:14px;
+    }
+
+    input[type="file"]::file-selector-button{
+        padding:5px 8px;
+
+        font-size:13px;
+    }
+
     .btn1{
         width:100%;
+        max-width:100%;
+
+        padding:11px;
+
+        font-size:14px;
+    }
+
+    .original,
+    .compress{
         font-size:14px;
     }
 
